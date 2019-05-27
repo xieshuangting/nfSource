@@ -1,0 +1,25 @@
+{
+	device:{
+		title:'设备',
+		data:[{
+			name:"在线",
+			value:40
+		},{
+			name:"离线",
+			value:30
+		},{
+			name:"异常",
+			value:20
+		}]
+	},
+	deviceWarn:{
+		title:"异常警告",
+		data:[{
+			name:"设备停电",
+			value:40
+		},{
+			name:"设备过载",
+			value:60
+		}]
+	}
+}

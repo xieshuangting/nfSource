@@ -1,0 +1,32 @@
+{
+	amount:[
+		{
+			name:"放电次数",
+			value:4825
+		},
+		{
+			name:"对比数据",
+			value:6000
+		}
+	],
+	time:[
+		{
+			name:"充电时间",
+			value:8600 
+		},
+		{
+			name:"对比数据",
+			value:10000
+		}
+	],
+	electric:[
+		{
+			name:"剩余电量",
+			value:1100
+		},
+		{
+			name:"对比数据",
+			value:4000
+		}
+	]
+}

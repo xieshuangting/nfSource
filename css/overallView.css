@@ -1,0 +1,485 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1620px;
+	color: #fff;
+}
+.outer-wrapper{
+	width: 4620px;
+	height: 100%;
+}
+
+.left-wrapper{
+	width: 1080px;
+	height: 100%;
+	margin-right: 80px;
+	float: left;
+}
+.middle-wrapper{
+	width: 2260px;
+	height: 100%;
+	float: left;
+	margin-right: 80px;
+}
+.middle-item-wrapper{
+	width: 1100px;
+	height: 350px;
+	margin-top: 40px;
+	float: left;
+	background-image: url(./../img/全景图/下边框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 60px;
+}
+.middle-item-wrapper:last-child{
+	margin-right: 0px;
+}
+.right-wrapper{
+	width: 1080px;
+	height: 100%;
+	float: left;
+}
+.item-wrapper{
+	width: 100%;
+	height: 350px;
+	margin-top: 40px;
+	background-image: url(./../img/全景图/左右框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.middle-item{
+	width: 2260px;
+	height: 1130px;
+	margin-top: 40px;
+}
+.item-title{
+	padding-left: 30px;
+	padding-top: 25px;
+	height: 50px;
+}
+.icon-img{
+	margin-right: 20px;
+}
+.icon-img img{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: 4px;
+}
+.icon-text{
+	font-size: 32px;
+}
+
+/*综合分析开始*/
+.right-one-wrapper{
+	width: 100%;
+	height: 275px;
+}
+.right-one-left-item{
+	width: 332px;
+	margin-right:80px;
+	padding-left: 60px;
+	height: 100%;
+	box-sizing: border-box; 
+	float: left;
+}
+.right-one-right-item{
+	width: 668px;
+	height: 100%;
+	float: left;
+}
+.right-one-left-item-icon{
+	text-align: center;
+	width: 272px;
+	height: 110px;
+	background-image: url(./../img/全景图/综合-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.right-one-left-item-icon:first-child{
+	margin-bottom: 10px;
+}
+.right-one-left-item-icon-num{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 70px;
+}
+.right-one-left-item-icon-num.num1{
+	color: rgb(36,237,184);
+}
+.right-one-left-item-icon-num.num2{
+	color: rgb(254,101,144);
+}
+.right-one-left-item-icon-text{
+	font-size: 24px;
+	line-height: 40px;
+}
+/*综合分析结束*/
+
+/*效率分析开始*/
+.right-two-wrapper{
+	width: 100%;
+	height: 275px;
+	padding:30px;
+	box-sizing: border-box;
+}
+.right-two-wrapper-chart{
+	width: 320px;
+	margin-right: 30px;
+	float: left;
+	height: 100%;
+}
+.right-two-wrapper-chart:last-child{
+	margin-right: 0;
+}
+/*效率分析结束*/
+
+/*安全分析开始*/
+.right-three-wrapper{
+	width: 100%;
+	height: 275px;
+}
+/*安全分析结束*/
+
+/*社会贡献开始*/
+.right-four-wrapper{
+	padding-right: 40px;
+	padding-left: 40px;
+	box-sizing:border-box;
+	width: 100%;
+	height: 275px;
+}
+.right-four-item{
+	/*padding: 20px 0;*/
+	box-sizing: border-box;
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.right-four-item-icon{
+	height: 40px;
+}
+.right-four-item-icon img{
+	width: 40px;
+	height: 40px;
+}
+.right-four-item-icon span{
+	font-size: 28px;
+	position: relative;
+	top: -10px;
+}
+.right-four-item1-wrapper{
+	width: 466px;
+	height: 28px;
+	overflow:hidden;
+	margin-bottom: 20px;
+}
+.right-four-item1{
+	height: 70px;
+	width: 500px;
+}
+/*社会贡献结束*/
+
+/*充电桩运行情况开始*/
+.middle-item-right-wrapper{
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	width: 100%;
+	height: 275px;
+	box-sizing: border-box;
+}
+.middle-item-right-item{
+	width: 220px;
+	height: 220px;
+	margin-right: 46px;
+	float: left;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.middle-item-right-item:last-child{
+	margin-right: 0;
+}
+.middle-item-right-item.item1{
+	background-image: url(./../img/全景图/充电桩1-8.png);
+}
+.middle-item-right-item.item2{
+	background-image: url(./../img/全景图/充电桩2-8.png);
+}
+.middle-item-right-item.item3{
+	background-image: url(./../img/全景图/充电桩3-8.png);
+}
+.middle-item-right-item.item4{
+	background-image: url(./../img/全景图/充电桩4-8.png);
+}
+.middle-item-right-item-mun{
+	padding-top: 115px;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 65px;
+	padding-bottom: 5px;
+}
+.middle-item-right-item-text{
+	font-size: 14px;
+}
+/*充电桩运行情况结束*/
+
+/*重点用户开始*/
+.middle-item-left-wrapper{
+	width: 100%;
+	height: 275px;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-top: 20px;
+	padding-right: 40px;
+	position: relative;
+}
+.middle-item-left-title{
+	height: 80px;
+	width: 100%;
+}
+.middle-item-left-title img{
+	position:absolute;
+	top: 0;
+	width: 80px;
+	height: 80px;
+}
+.middle-item-left-title span{
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 100px;
+}
+.middle-item-left-item{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.middle-item-left-content{
+	width: 100%;
+	/*height: 135px;*/
+	/*position: relative;*/
+}
+.middle-item-left-icon,.middle-item-left-chart{
+	height: 100%;
+	float: left;
+}
+.middle-item-left-icon{
+	width: 200px;
+}
+.middle-item-left-chart{
+	position: relative;
+	top: -10px;
+	width: 310px;
+	height: 170px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.middle-item-left-icon1{
+	height: 60px;
+	width: 100%;
+	margin-bottom: 25px;
+}
+.middle-item-left-icon1:last-child{
+	margin-bottom: 0px;
+}
+.middle-item-left-icon1 img{
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 20px;
+	position: relative;
+	top: 2px;
+}
+.middle-item-left-icon1-text{
+	float: left;
+}
+.middle-item-left-icon1-text-mun{
+	font-size: 32px;
+	font-weight: bold;
+}
+.middle-item-left-icon1-text-title{
+	font-size: 14px;
+}
+/*重点用户结束*/
+
+/*储能站项目情况开始*/
+.left-four-item-wrapper{
+	width: 100%;
+	height: 275px;
+	padding: 3px 40px 0;
+	box-sizing: border-box;
+}
+.left-four-item{
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+.left-four-item>img{
+	width: 144px;
+	height: 144px;
+}
+.left-four-item-bottom{
+	width: 168px;
+	display: inline-block;
+}
+.left-four-item-bottom>img{
+	width: 168px;
+}
+.bottom-title{
+	font-size: 24px;
+}
+.bottom-num{
+	font-size: 32px;
+	font-weight: bold;
+}
+/*储能站项目情况结束*/
+
+/*风电项目情况开始*/
+.left-two-chart{
+	height: 275px;
+	width: 100%;
+}
+/*风电项目情况结束*/
+
+/*风电项目情况开始*/
+.left-first-item-wrapper{
+	height: 275px;
+	width: 100%;
+	padding-top: 40px;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.left-first-item{
+	width: 33.3%;
+	float: left;
+    margin-bottom: 50px;
+}
+.left-first-item:nth-child(n+4){
+	margin-bottom: 0;
+}
+.left-first-item1{
+	float: left;
+	margin-right: 40px;
+	width: 40%;
+}
+.left-first-item2{
+	float: left;
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 60px;
+}
+.left-first-item1 span{
+	display: block;
+	font-size: 26px;
+}
+.left-first-item2.num1{
+	color: rgb(36,237,184);
+}
+.left-first-item2.num2{
+	color: rgb(246,213,74);
+}
+.left-first-item2.num3{
+	color: rgb(127,253,255);
+}
+.left-first-item2.num4{
+	color: rgb(1,170,229);
+}
+/*风电项目情况结束*/
+
+/*水电项目情况开始*/
+.left-three-wrapper{
+	width: 100%;
+	height: 275px;
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+	box-sizing: border-box;
+	position: relative;
+}
+.left-three-wrapper-item{
+	float: left;
+	width: 25%;
+	height: 110px;
+	border-right: 1px solid #9FC7F7;
+	border-bottom: 1px solid #9FC7F7;
+}
+.left-three-wrapper-item:nth-child(n+4){
+	border-bottom: none;
+}
+.left-three-wrapper-item-top{
+	padding-top: 10px;
+}
+.left-three-wrapper-item-top img{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	margin-left: 25px;
+}
+.left-three-wrapper-item-top span{
+	font-size: 24px;
+}
+.left-three-wrapper-item-bottom{
+	text-align: center;
+	font-size: 52px;
+	color: #F6D54A;
+}
+.left-three-wrapper-item2{
+	position:absolute;
+	right: 0;
+	width: 285px;
+	height: 250px;
+}
+.left-three-wrapper-item-bottom2{
+	text-align: center;
+	font-size: 120px;
+	color: #F6D54A;
+}
+/*水电项目情况结束*/
+
+/*地图按钮样式开始*/
+.middle-wrapper{
+	position: relative;
+}
+.map-button{
+	position: absolute;
+	z-index: 9999;
+	top: 60px;
+	right: 10px;
+}
+.map-button-item{
+	cursor: pointer;
+	height: 60px;
+	display: inline-block;
+	float: left;
+	border: 2px solid #2D4E81;
+	border-radius: 8px;
+	margin-left: 40px;
+	background: rgba(255,255,255,.8);
+	position: relative;
+}
+.map-button-item:hover{
+	background: rgba(255,255,255,1)
+}
+.map-button-item img{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 44px;
+	height: 44px;
+	position: relative;
+	top: 10px;
+}
+.map-button-item span{
+	line-height: 60px;
+	padding-right: 20px;
+	font-size: 24px;
+	color: rgb(14,27,45);
+	position: relative;
+	top: -3px;
+}
+.button-visited img,.button-visited span{
+	opacity: 0.5
+}
+/*地图按钮样式结束*/

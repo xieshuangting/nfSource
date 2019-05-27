@@ -1,0 +1,21 @@
+{
+	volume:{
+			name:'总装机空量',
+			percent:[0.8],
+			value:'40',
+			unit:'(WM)'
+	},
+	electricity:{
+			name:'累计发电量',
+			percent:[0.95],
+			value:'29760',
+			unit:'(万kWh)'
+	},
+	time:{
+			name:'发电小时数',
+			percent:[0.7],
+			value:'2480',
+			unit:'(h)'
+	}
+
+}

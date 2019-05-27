@@ -1,0 +1,20 @@
+{
+	amount:{
+		title:"储能总数",
+		total:6,
+		value:5,
+		unit:"家"
+	},
+	capacity:{
+		title:"容量",
+		total:100,
+		value:80,
+		unit:"MW"
+	},
+	time:{
+		title:"投运时间",
+		total:900,
+		value:650,
+		unit:"天"
+	}
+}

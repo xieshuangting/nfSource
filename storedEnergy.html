@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>乳源智能电网监测分析与辅助决策</title>
+	<link rel="stylesheet" type="text/css" href="./css/storedEnergy.css">
+</head>
+<body>
+	<div class="outer-wrapper" id="app">
+		<div class="left-wrapper">
+			<div class="left-middle-chart-wrapper">
+				<!-- 在这里插入图表-中间 -->
+				<div class="left-middle-text">
+					<div class="left-middle-text-num" v-html="chargeData.electric[0].value"></div>
+					<div class="left-middle-text-title">剩余电量<span class="left-middle-text-title-danwei">(万kWh)</span></div>
+				</div>
+				<div class="left-middle-chart">
+					<div class="left-middle-chart-item" ref="electricChart"></div>
+				</div>
+			</div>
+			<div class="left-right-chart-wrapper">
+				<div class="left-right-top-wrapper">
+					<!-- 在这里插入图表-右边-上-1 -->
+					<div class="left-wrapper-top-item-wrapper">
+						<div class="left-right-top-item" ref="secondChart1"></div>
+					</div>
+					
+					<!-- 在这里插入图表-右边-上-2 -->
+					<div class="left-wrapper-top-item-wrapper">
+						<div class="left-right-top-item" ref="secondChart2"></div>
+					</div>
+				</div>
+				<!-- 在这里插入图表-右边-中间-1 -->
+				<div class="left-right-bottom-item" ref="liquidFillItem_1"></div>
+				<!-- 在这里插入图表-右边-中间-2 -->
+				<div class="left-right-bottom-item" ref="liquidFillItem_2"></div>
+				<!-- 在这里插入图表-右边-中间-3 -->
+				<div class="left-right-bottom-item" ref="liquidFillItem_3"></div>
+			</div>
+		</div>
+		<div class="right-wrapper margin-60">
+			<div class="right-item">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">储能信息汇总</span>
+				</div>
+				<div class="first-charts-wrapper">
+					<div class="first-charts-item" ref="firstCharts1"></div>
+					<div class="first-charts-item" ref="firstCharts2"></div>
+					<div class="first-charts-item" ref="firstCharts3"></div>
+				</div>
+			</div>
+			<div class="right-item">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">充放电量趋势分析-2018年</span>
+				</div>
+				<div class="two-charts" ref="impulseEleTrendItem"></div>
+			</div>
+		</div>
+		<div class="right-wrapper">
+			<div class="right-item">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">剩余容量占比-2018年</span>
+				</div>
+				<div class="three-charts" ref="residualCapacityItem"></div>
+			</div>
+			<div class="right-item">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">充放电次数与充放电时间比-2018年</span>
+				</div>
+				<div class="two-charts" ref="impulseEleItem"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts-liquidfill.min.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts-gl.js"></script>
+	<script type="text/javascript" src="./js/storedEnergy.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1620px;
+	color: #fff;
+}
+.outer-wrapper{
+	width: 4620px;
+	height: 100%;
+}
+.left-wrapper{
+	float: left;
+	height: 100%;
+	width: 3200px;
+	padding-top: 40px;
+	box-sizing: border-box;
+	margin-right: 80px;
+}
+.right-wrapper{
+	float: left;
+	height: 100%;
+	width: 1300px;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+.right-item-top{
+	width: 100%;
+	height: 480px;
+	margin-bottom: 40px;
+	background-image: url(./../img/数据可视化/框1-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.right-item-bottom{
+	width: 100%;
+	height: 480px;
+}
+.right-item-bottom-item{
+	float: left;
+	width: 630px;
+	height: 100%;
+	background-image: url(./../img/数据可视化/框2-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.right-item-bottom-item:last-child{
+	margin-left: 40px;
+}
+
+/*label start*/
+.item-title{
+	padding-left: 30px;
+	padding-top: 25px;
+	height: 50px;
+}
+.icon-img{
+	margin-right: 20px;
+}
+.icon-img img{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: 4px;
+}
+.icon-text{
+	font-size: 32px;
+}
+/*label end*/
+
+.right-item-chart{
+	width: 100%;
+	height: 405px;
+}
+.wsd,.jyl{
+	width: 630px;
+}
+
+/*水电站综合分析开始*/
+.right-item-top-wrapper{
+	height: 408px;
+	width: 100%;
+	padding-top: 50px;
+	padding-left: 30px;
+	/*padding-right: 30px;*/
+	box-sizing: border-box;
+}
+.right-item-top-item{
+	width: 25%;
+	text-align: center;
+	height: 100%;
+	float: left;
+}
+.right-item-top-item img{
+	width: 120px;
+	height: 120px;
+}
+.right-item-top-item-text{
+	font-size: 40px;
+	margin-top: 20px;
+}
+.right-item-top-item-num{
+	margin-top: 20px;
+	font-size: 60px;
+	font-weight: bold;
+}
+/*水电站综合分析结束*/
+
+/*左边大图开始*/
+.left-item{
+	position: relative;
+	width: 100%;
+	height: 1520px;
+	background-image: url(./../img/数据可视化/数据可视化背景-01.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.weather-wrapper{
+	font-size: 32px;
+	padding-top: 36px;
+	margin-left: 60px;
+}
+
+.weather-wrapper>span{
+	margin-right: 40px;
+}
+.weather-wrapper img{
+	margin-left: 10px;
+	position: relative;
+	top: 8px;
+}
+.weather-wrapper .weather-title{
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.com-wrapper{
+	position: absolute;
+	right: 70px;
+	top: 60px;
+	font-size: 42px;
+}
+.com-wrapper div{
+	margin-bottom: 30px;
+} 
+.com-wrapper img{
+	width: 40px;
+	height: 40px;
+	margin-left: 40px;
+	position: relative;
+	top: 5px;
+}
+
+.left-item-one{
+	position: absolute;
+	top: 286px;
+	left: 424px;
+	text-align: center;
+}
+.left-item-num{
+	font-size: 60px;
+	font-weight: bold;
+}
+.left-item-text{
+	font-size: 40px;
+}
+.left-item-two{
+	position: absolute;
+	bottom: 160px;
+	right: 90px;
+	text-align: center;
+}
+.left-item-three{
+	position: absolute;
+	top: 350px;
+	left: 156px;
+	text-align: center;
+}
+.left-item li{
+	font-size: 34px;
+	font-weight: bold;
+	list-style: none;
+}
+.left-item li span{
+	display: inline-block;
+	width: 246px;
+	height: 83px;
+	line-height: 83px;
+	text-align: center;
+}
+.left-item-five{
+	position: absolute;
+	top: 170px;
+	left: 1346px;
+}
+.left-item-six{
+	position: absolute;
+	top: 920px;
+	left: 1680px;
+}
+.left-item-four{
+	position: absolute;
+	z-index: 999;
+	top: 1185px;
+	left: 830px;
+	font-size: 34px;
+	font-weight: bold;
+	transform:rotate(13deg);
+	-ms-transform:rotate(13deg); 	/* IE 9 */
+	-moz-transform:rotate(13deg); 	/* Firefox */
+	-webkit-transform:rotate(13deg); /* Safari 和 Chrome */
+	-o-transform:rotate(13deg); 	/* Opera */
+}
+/*左边大图结束*/
+
+.bottom-item-one{
+	position: relative;
+}
+.item-title-switch{
+	position: absolute;
+	top: 34px;
+	right: 0px;
+	font-size: 20px;
+}
+.item-title-switch img{
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	/*margin-right: 10px;*/
+}
+.item-title-switch span{
+	margin-right: 20px;
+}
+
+/*动画*/
+.float-arrow{
+	position: absolute;
+	width: 1056px;
+	height:480px;
+	top: 808px;
+	left: 422px;
+	background-image: url(./../img/数据可视化/上游水.gif);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.top-water{
+	position: absolute;
+	width: 1690px;
+	height:330px;
+	top: 1120px;
+	left: 1270px;
+	background-image: url(./../img/数据可视化/下游水.gif);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.power{
+	position: absolute;
+	width: 1380px;
+	height:330px;
+	top: 789px;
+	left: 1442px;
+	background-image: url(./../img/数据可视化/电.gif);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ul,li{
+	margin:0;
+	padding: 0;
+}

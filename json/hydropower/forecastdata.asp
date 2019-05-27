@@ -1,0 +1,10 @@
+{
+	rate:{
+		name:"发电量预测(万kWh)",
+		value:230.7
+	},
+	capacity:{
+		name:"发电功率预测(kW)",
+		value:127
+	}
+}

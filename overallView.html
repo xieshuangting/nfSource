@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>乳源智能电网监测分析与辅助决策</title>
+	<link rel="stylesheet" type="text/css" href="./css/overallView.css">
+</head>
+<body>
+	<div class="outer-wrapper" id="app">
+		<div class="left-wrapper">
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">光伏项目情况</span>
+				</div>
+				<div class="left-first-item-wrapper">
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.proTotal.title">项目总数</span>
+							<span v-html="totalData.guangfu.proTotal.unit">(个)</span>
+						</div>
+						<div class="left-first-item2 num1" v-html="totalData.guangfu.proTotal.value"></div>
+					</div>
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.totalCapacity.title">总装机容量</span>
+							<span v-html="totalData.guangfu.totalCapacity.unit">(MW)</span>
+						</div>
+						<div class="left-first-item2 num2" v-html="totalData.guangfu.totalCapacity.value"></div>
+					</div>
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.totalPower.title">总发电量</span>
+							<span v-html="totalData.guangfu.totalPower.unit">(kW)</span>
+						</div>
+						<div class="left-first-item2 num3" v-html="totalData.guangfu.totalPower.value"></div>
+					</div>
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.cleer.title">占清洁能源</span>
+							<span v-html="totalData.guangfu.cleer.unit">(%)</span>
+						</div>
+						<div class="left-first-item2 num4" v-html="totalData.guangfu.cleer.value"></div>
+					</div>
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.inlineTotal.title">并网容量</span>
+							<span v-html="totalData.guangfu.inlineTotal.unit">(MW)</span>
+						</div>
+						<div class="left-first-item2 num2" v-html="totalData.guangfu.inlineTotal.value"></div>
+					</div>
+					<div class="left-first-item">
+						<div class="left-first-item1">
+							<span v-html="totalData.guangfu.yearTotal.title">年总发电量</span>
+							<span v-html="totalData.guangfu.yearTotal.unit">(kW)</span>
+						</div>
+						<div class="left-first-item2 num3" v-html="totalData.guangfu.yearTotal.value"></div>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">风电项目情况</span>
+				</div>
+				<!-- 在这里插入图表 -->
+				<div class="left-two-chart" ref="windPowerChart_1"></div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">水电项目情况</span>
+				</div>
+				<div class="left-three-wrapper">
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电1-8.png">
+							<span v-html="totalData.shuidian.proTotal.title">项目总数(个)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.proTotal.value"></div>
+					</div>
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电2-8.png">
+							<span v-html="totalData.shuidian.onSport.title">正在运行情况(个)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.onSport.value">30</div>
+					</div>
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电3-8.png">
+							<span v-html="totalData.shuidian.offSport.title">未运行水电站(个)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.offSport.value"></div>
+					</div>
+					<div class="left-three-wrapper-item2">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电7-8.png">
+							<span v-html="totalData.shuidian.clean.title">占清洁能源(%)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom2" v-html="totalData.shuidian.clean.value"></div>
+					</div>
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电4-8.png">
+							<span v-html="totalData.shuidian.capical.title">装机容量(MW)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.capical.value"></div>
+					</div>
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电5-8.png">
+							<span v-html="totalData.shuidian.power.title">总发电量(kW)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.power.value"></div>
+					</div>
+					<div class="left-three-wrapper-item">
+						<div class="left-three-wrapper-item-top">
+							<img src="./img/全景图/水电6-8.png">
+							<span v-html="totalData.shuidian.rate.title">发电效率(%)</span>
+						</div>
+						<div class="left-three-wrapper-item-bottom" v-html="totalData.shuidian.rate.value"></div>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">储能站项目情况</span>
+				</div>
+				<div class="left-four-item-wrapper">
+					<div class="left-four-item">
+						<img src="./img/全景图/储能1-8.png">
+						<div class="left-four-item-bottom">
+							<span class="bottom-title" v-html='totalData.chuneng.proTotal.title'>项目总数</span>
+							<img src="./img/全景图/储能5-8.png">
+							<span class="bottom-num" v-html='totalData.chuneng.proTotal.value'></span>
+						</div>
+					</div>
+					<div class="left-four-item">
+						<img src="./img/全景图/储能2-8.png">
+						<div class="left-four-item-bottom">
+							<span class="bottom-title" v-html='totalData.chuneng.capital.title'>项目总数</span>
+							<img src="./img/全景图/储能5-8.png">
+							<span class="bottom-num" v-html='totalData.chuneng.capital.value'></span>
+						</div>
+					</div>
+					<div class="left-four-item">
+						<img src="./img/全景图/储能3-8.png">
+						<div class="left-four-item-bottom">
+							<span class="bottom-title" v-html='totalData.chuneng.time.title'>可用时间</span>
+							<img src="./img/全景图/储能5-8.png">
+							<span class="bottom-num" v-html='totalData.chuneng.time.value'></span>
+						</div>
+					</div>
+					<div class="left-four-item">
+						<img src="./img/全景图/储能4-8.png">
+						<div class="left-four-item-bottom">
+							<span class="bottom-title" v-html='totalData.chuneng.power.title'>循环重放电次数</span>
+							<img src="./img/全景图/储能5-8.png">
+							<span class="bottom-num" v-html='totalData.chuneng.power.value'></span>
+						</div>
+					</div>
+					<div class="left-four-item">
+						<img src="./img/全景图/储能2-8.png">
+						<div class="left-four-item-bottom">
+							<span class="bottom-title" v-html='totalData.chuneng.totalPower.title'>储能系统总电量</span>
+							<img src="./img/全景图/储能5-8.png">
+							<span class="bottom-num" v-html='totalData.chuneng.totalPower.value'></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middle-wrapper">
+			<!-- 在这里插入图表 -->
+			<div class="map-button">
+				<div class="map-button-item" v-on:click="showMarker($event)" data="gxww">
+					<img src="./img/全景图/1-8.png">
+					<span>光绪微网</span>
+				</div>
+				<div class="map-button-item" v-on:click="showMarker($event)" data="zhpt">
+					<img src="./img/全景图/2-8.png">
+					<span>智慧平台</span>
+				</div>
+				<div class="map-button-item" v-on:click="showMarker($event)" data="gfxm">
+					<img src="./img/全景图/3-8.png">
+					<span>光伏项目</span>
+				</div>
+				<div class="map-button-item" v-on:click="showMarker($event)" data="fdxm">
+					<img src="./img/全景图/4-8.png">
+					<span>风电项目</span>
+				</div>
+				<div class="map-button-item" v-on:click="showMarker($event)" data="xsdxm">
+					<img src="./img/全景图/5-8.png">
+					<span>小水电项目</span>
+				</div>
+				<div class="map-button-item" v-on:click="showMarker($event)" data="ddqccdz">
+					<img src="./img/全景图/6-8.png">
+					<span>电动汽车充电站</span>
+				</div>
+			</div>
+			<div class="middle-item" id="map"></div>
+			<div class="middle-item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">重点用户运行情况</span>
+				</div>
+				<div class="middle-item-left-wrapper">
+					<div class="middle-item-left-item">
+						<div class="middle-item-left-title">
+							<img src='./img/全景图/重点1-8.png'>
+							<span>丽宫酒店项目</span>
+						</div>
+						<div class="middle-item-left-content">
+							<div class="middle-item-left-icon">
+								<div class="middle-item-left-icon1">
+									<img src="./img/全景图/重点2-8.png">
+									<div class="middle-item-left-icon1-text">
+										<div class="middle-item-left-icon1-text-mun" v-html="totalData.yonghu.ligong.online.value"></div>
+										<div class="middle-item-left-icon1-text-title" v-html="totalData.yonghu.ligong.online.title">设备在线数</div>
+									</div>
+								</div>
+								<div class="middle-item-left-icon1">
+									<img src="./img/全景图/重点3-8.png">
+									<div class="middle-item-left-icon1-text">
+										<div class="middle-item-left-icon1-text-mun" v-html="totalData.yonghu.ligong.offline.value"></div>
+										<div class="middle-item-left-icon1-text-title" v-html="totalData.yonghu.ligong.offline.title">运行故障</div>
+									</div>
+								</div>
+							</div>
+							<!-- 在这里插入图表 -->
+							<div class="middle-item-left-chart" ref='cusChart_1'></div>
+						</div>
+					</div>
+					<div class="middle-item-left-item">
+						<div class="middle-item-left-title">
+							<img src='./img/全景图/重点4-8.png'>
+							<span>云门寺智慧用电项目</span>
+						</div>
+						<div class="middle-item-left-content">
+							<div class="middle-item-left-icon">
+								<div class="middle-item-left-icon1">
+									<img src="./img/全景图/重点2-8.png">
+									<div class="middle-item-left-icon1-text">
+										<div class="middle-item-left-icon1-text-mun" v-html="totalData.yonghu.yumensi.online.value">20台</div>
+										<div class="middle-item-left-icon1-text-title" v-html="totalData.yonghu.yumensi.online.title">设备在线数</div>
+									</div>
+								</div>
+								<div class="middle-item-left-icon1">
+									<img src="./img/全景图/重点3-8.png">
+									<div class="middle-item-left-icon1-text">
+										<div class="middle-item-left-icon1-text-mun" v-html="totalData.yonghu.yumensi.offline.value">10次</div>
+										<div class="middle-item-left-icon1-text-title" v-html="totalData.yonghu.yumensi.offline.title">运行故障</div>
+									</div>
+								</div>
+							</div>
+							<!-- 在这里插入图表 -->
+							<div class="middle-item-left-chart" ref='cusChart_2'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="middle-item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">充电桩运行情况</span>
+				</div>
+				<div class="middle-item-right-wrapper">
+					<div class="middle-item-right-item item1">
+						<div class="middle-item-right-item-mun" v-html='totalData.congdianzhuang.congdianzhan.value'></div>
+						<div class="middle-item-right-item-text" v-html='totalData.congdianzhuang.congdianzhan.title'></div>
+					</div>
+					<div class="middle-item-right-item item2">
+						<div class="middle-item-right-item-mun" v-html='totalData.congdianzhuang.congdianzhuang.value'></div>
+						<div class="middle-item-right-item-text" v-html='totalData.congdianzhuang.congdianzhuang.title'>充电桩(台)</div>
+					</div>
+					<div class="middle-item-right-item item3">
+						<div class="middle-item-right-item-mun" v-html='totalData.congdianzhuang.time.value'></div>
+						<div class="middle-item-right-item-text" v-html='totalData.congdianzhuang.time.title'>累计充电次数(次)</div>
+					</div>
+					<div class="middle-item-right-item item4">
+						<div class="middle-item-right-item-mun" v-html='totalData.congdianzhuang.power.value'></div>
+						<div class="middle-item-right-item-text" v-html='totalData.congdianzhuang.power.title'>累计供电(kW)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-wrapper">
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">绿色能源-综合分析</span>
+				</div>
+				<div class="right-one-wrapper">
+					<div class="right-one-left-item">
+						<div class="right-one-left-item-icon">
+							<div class="right-one-left-item-icon-num num1" v-html='totalData.zhonghe.power.value'></div>
+							<div class="right-one-left-item-icon-text" v-html='totalData.zhonghe.power.title'></div>
+						</div>
+						<div class="right-one-left-item-icon">
+							<div class="right-one-left-item-icon-num num2" v-html='totalData.zhonghe.rate.value'></div>
+							<div class="right-one-left-item-icon-text" v-html='totalData.zhonghe.rate.title'></div>
+						</div>
+					</div>
+					<!-- 在这里插入图表 -->
+					<div class="right-one-right-item" ref="greenMultipleItem"></div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">绿色能源-效率分析</span>
+				</div>
+				<div class="right-two-wrapper">
+					<!-- 在这里插入图表 -->
+					<div class="right-two-wrapper-chart" ref="greenEffItem_1"></div>
+					<!-- 在这里插入图表 -->
+					<div class="right-two-wrapper-chart" ref="greenEffItem_2"></div>
+					<!-- 在这里插入图表 -->
+					<div class="right-two-wrapper-chart" ref="greenEffItem_3"></div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">绿色能源-安全分析</span>
+				</div>
+				<!-- 在这里插入图表 -->
+				<div class="right-three-wrapper" ref="greenChart"></div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">绿色能源-社会贡献</span>
+				</div>
+				<div class="right-four-wrapper">
+					<!-- 在这里插入图表 -->
+					<div class="right-four-item" ref="greenPileItem"></div>
+					<!-- 在这里插入图表 -->
+					<div class="right-four-item" ref="devoteChart">
+						<div class="right-four-item-icon">
+							<img src="./img/全景图/贡献1-8.png">
+							<span v-html="devoteData.co2.title+':'+devoteData.co2.value+devoteData.co2.unit"></span>
+						</div>
+						<div class="right-four-item1-wrapper">
+							<div class="right-four-item1" ref="devoteChart1"></div>
+						</div>
+						<div class="right-four-item-icon">
+							<img src="./img/全景图/贡献2-8.png">
+							<span v-html="devoteData.coal.title+':'+devoteData.coal.value+devoteData.coal.unit"></span>
+						</div>
+						<div class="right-four-item1-wrapper">
+							<div class="right-four-item1" ref="devoteChart2"></div>
+						</div>
+						<div class="right-four-item-icon">
+							<img src="./img/全景图/贡献3-8.png">
+							<span v-html="devoteData.tree.title+':'+devoteData.tree.value+devoteData.tree.unit"></span>
+						</div>
+						<div class="right-four-item1-wrapper">
+							<div class="right-four-item1" ref="devoteChart3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&amp;key=9c0ade1d3d6c1ea6375d73b09f939be3"></script>
+	<script src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+	<script type="text/javascript" src="./js/overallView.js"></script>
+</body>
+</html>

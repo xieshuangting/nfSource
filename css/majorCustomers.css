@@ -1,0 +1,154 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1620px;
+	color: #fff;
+}
+.outer-wrapper{
+	width: 4620px;
+	height: 100%;
+}
+.left-wrapper{
+	float: left;
+	width: 1260px;
+	height: 100%;
+	margin-right: 80px;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+.middle-wrapper{
+	float: left;
+	width: 1900px;
+	height: 100%;
+	margin-right: 80px;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+.right-wrapper{
+	float: left;
+	width: 1260px;
+	height: 100%; 
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+.item-wrapper{
+	width: 100%;
+	height: 480px;
+	margin-bottom: 40px;
+	background-image: url(./../img/重点用户/左右框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.item-wrapper:nth-child(3){
+	margin-bottom: 0;
+}
+.middle-item-wrapper1{
+	width: 100%;
+	height: 780px;
+	margin-bottom: 40px;
+	background-image: url(./../img/重点用户/中间上边框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.middle-item-wrapper2{
+	width: 100%;
+	height: 700px;
+	background-image: url(./../img/重点用户/中间下边框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*label start*/
+.item-title{
+	padding-left: 30px;
+	padding-top: 25px;
+	height: 50px;
+}
+.icon-img{
+	margin-right: 20px;
+}
+.icon-img img{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: 4px;
+}
+.icon-text{
+	font-size: 32px;
+}
+/*label end*/
+
+.one-charts-wrapper{
+	width: 100%;
+	height: 405px;
+}
+.one-charts-item{
+	width: 33.3%;
+	height: 100%;
+	float: left;
+}
+
+.item-first-wrapper{
+	width: 100%;
+	height: 1000px;
+	margin-bottom: 40px;
+	background-image: url(./../img/重点用户/背景-1.jpg);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.item-first-charts{
+	height:900px;
+	width: 100%;
+}
+.item-first-title{
+	font-size: 60px;
+	font-weight: bold;
+	padding-top: 12px;
+	text-align: center;
+}
+.middle-item-wrapper1-one{
+	width: 950px;
+	height: 100%;
+	float: left;
+}
+.middle-item-first-chart{
+	width: 100%;
+	height: 705px;
+}
+.middle-item-div{
+	width: 100%;
+	margin-top: 20px;
+	height: 100px;
+	box-sizing: border-box;
+	padding-left: 80px;
+}
+.middle-item-div-one{
+	float: left;
+	margin-right: 120px;
+	width: 500px;
+	height: 100px;
+	background-image: url(./../img/重点用户/框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-weight:bold;
+    font-size: 32px;
+    line-height: 100px;
+    text-align: center;
+}
+.middle-item-div-one:last-child{
+	margin-right: 0;
+}
+.middle-item-two-chart{
+	height: 505px;
+	width: 100%;
+}
+.right-charts-item{
+	width: 420px;
+	height: 100%;
+	float: left;
+}
+.padding-20{
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}

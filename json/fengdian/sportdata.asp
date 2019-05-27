@@ -1,0 +1,12 @@
+{
+	generation:{
+		title:"发电功率",
+		unit:"68.9(kW)",
+		value:68.9
+	},
+	charge:{
+		title:"电压合格率",
+		unit:"99.95(%)",
+		value:99.95
+	}
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>乳源智能电网监测分析与辅助决策</title>
+	<link rel="stylesheet" type="text/css" href="./css/guangfu.css">
+</head>
+<body>
+	<div class="outer-wrapper" id="app">
+		<div class="left-wrapper">
+			<div class="item-wrapper">
+				<div class="item left-item-gb">
+					<div class="item-title">
+						<div class="item-title-block-left"></div>
+						<div class="item-title-name">电站项目分区域分析</div>
+					</div>
+					<!-- 在这里插入图表 -->
+					<div class="item-content" ref="pileItem">
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item left-item-gb">
+					<div class="item-title">
+						<div class="item-title-block-left"></div>
+						<div class="item-title-name">电站PR-2018年</div>
+					</div>
+					<!-- 在这里插入图表 -->
+					<div class="item-content" ref='barItem'>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item left-item-gb">
+					<div class="item-title">
+						<div class="item-title-block-left"></div>
+						<div class="item-title-name">发电量趋势分析-2018年</div>
+					</div>
+					<!-- 在这里插入图表 -->
+					<div class="item-content" ref="bar2Item"></div>
+				</div>
+			</div>
+		</div>
+		<div class="middle-wrapper">
+			<div class="middle-item-wrapper">
+				<div class="middle-item">
+					<div class="middle-item-title">
+						<div class="middle-item-title-name">光伏地理分布</div>
+					</div>
+					<div class="middle-item-content">
+						<div class="left-icon-wrapper">
+							<!-- <div class="middle-left-item-title">
+								<div class="item-title-block"></div>
+								<div class="item-title-name">总概览</div>
+							</div> -->
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/电站装机容量.png"></div>
+								<div class="icon-text">
+									<span class="icon1-num icon-num" v-html="listData.capacity.value"></span>
+									<span class="icon-danwei" v-html="listData.capacity.unit"></span>
+									<span class="icon-title" v-html="listData.capacity.name"></span>
+								</div>
+							</div> 
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/电站功率.png"></div>
+								<div class="icon-text">
+									<span class="icon2-num icon-num" v-html="listData.power.value"></span>
+									<span class="icon-danwei" v-html="listData.power.unit"></span>
+									<span class="icon-title" v-html="listData.power.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/累计发电量.png"></div>
+								<div class="icon-text">
+									<span class="icon3-num icon-num" v-html="listData.electricity.value"></span>
+									<span class="icon-danwei" v-html="listData.electricity.unit"></span>
+									<span class="icon-title" v-html="listData.electricity.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/当日发电量.png"></div>
+								<div class="icon-text">
+									<span class="icon4-num icon-num" v-html="listData.day_electricity.value"></span>
+									<span class="icon-danwei" v-html="listData.day_electricity.unit"></span>
+									<span class="icon-title" v-html="listData.day_electricity.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/本月发电量.png"></div>
+								<div class="icon-text">
+									<span class="icon5-num icon-num" v-html="listData.mon_electricity.value"></span>
+									<span class="icon-danwei" v-html="listData.mon_electricity.unit"></span>
+									<span class="icon-title" v-html="listData.mon_electricity.name"></span>
+								</div>
+							</div>
+						</div>
+						<!-- 在这里插入图表 -->
+						<div class="middle-content" ref="mapItem">
+						</div>
+						<div class="right-icon-wrapper">
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/平均风速.png"></div>
+								<div class="icon-text">
+									<span class="icon1-num icon-num" v-html="listData.wind.value+listData.wind.unit"></span>							
+									<span class="icon-title" v-html="listData.wind.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/平均气温.png"></div>
+								<div class="icon-text">
+									<span class="icon2-num icon-num" v-html="listData.temperature.value+listData.temperature.unit"></span>
+									
+									<span class="icon-title" v-html="listData.temperature.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/平均气压.png"></div>
+								<div class="icon-text">
+									<span class="icon3-num icon-num" v-html="listData.pressure.value+listData.pressure.unit"></span>
+									
+									<span class="icon-title" v-html="listData.pressure.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/平均降雨量.png"></div>
+								<div class="icon-text">
+									<span class="icon4-num icon-num" v-html="listData.rain.value+listData.rain.unit"></span>
+									<!-- {{listData.sunlight.value}}{{listData.sunlight.unit}} -->
+									<span class="icon-title" v-html="listData.rain.name"></span>
+								</div>
+							</div>
+							<div class="icon-wrapper">
+								<div class="icon-img"><img src="./img/光伏项目/日照小时数.png"></div>
+								<div class="icon-text">
+									<span class="icon5-num icon-num" v-html="listData.sunlight.value+listData.sunlight.unit"></span>
+									<span class="icon-title" v-html="listData.sunlight.name"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-wrapper">
+			<div class="item-wrapper">
+				<div class="item right-item-gb">
+					<div class="item-title">
+						<div class="item-title-block"></div>
+						<div class="item-title-name">投资收益率比较-2018年</div>
+					</div>
+					
+					<div class="item-content">
+						<!-- 在这里插入图表 -->
+						<div class="item-content-right">
+							<div class="item-content-text" ref="lineItem"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item right-item-gb">
+					<div class="item-title">
+						<div class="item-title-block"></div>
+						<div class="item-title-name">投资收益比较-2018年</div>
+					</div>
+					
+					<div class="item-content">
+						<!-- 在这里插入图表 -->
+						<div class="item-content-right">
+							<div class="item-content-text" ref='line3Item'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrapper">
+				<div class="item right-item-gb">
+					<div class="item-title">
+						<div class="item-title-block"></div>
+						<div class="item-title-name">发电量比较-2018</div>
+					</div>
+					
+					<div class="item-content">
+						<!-- 在这里插入图表 -->
+						<div class="item-content-right">
+							<div class="item-content-text" ref="line2Item"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+
+	<script type="text/javascript" src="./js/guangfu.js"></script>
+</body>
+</html>

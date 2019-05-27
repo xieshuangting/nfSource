@@ -1,0 +1,180 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1620px;
+	color: #fff;
+}
+.outer-wrapper{
+	width: 4620px;
+	height: 97%;
+}
+.left-wrapper{
+	width: 2476px;
+	height: 1520px;
+	margin-top: 40px;
+	background-image: url(./../img/储能项目展示/背景.jpg);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 60px;
+    position: relative;
+}
+.right-wrapper{
+	float: left;
+	margin-top: 40px;
+	width: 992px;
+}
+.margin-60{
+	margin-right: 60px;
+}
+.right-item{
+	width: 100%;
+	height: 730px;
+	background-image: url(./../img/储能项目展示/储能图框1-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.right-item:first-child{
+	margin-bottom: 60px;
+}
+
+.item-title{
+	padding-left: 30px;
+	padding-top: 25px;
+	height: 50px;
+}
+.icon-img{
+	margin-right: 20px;
+}
+.icon-img img{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: 4px;
+}
+.icon-text{
+	font-size: 32px;
+}
+
+/*first charts start*/
+.first-charts-wrapper{
+	width: 100%;
+	height: 655px;
+	box-sizing: border-box;
+	padding:90px 60px 0 60px;
+}
+.first-charts-item{
+	width: 290.5px;
+	height: 80%;
+	float: left;
+}
+/*first charts end*/
+
+/*three charts start*/
+.three-charts{
+	height: 655px;
+	width: 100%;
+}
+/*three charts end*/
+
+/*two charts start*/
+.two-charts{
+	height: 655px;
+	width: 100%;
+	padding: 25px;
+	box-sizing: border-box;
+}
+/*two charts end*/
+
+/*第一个中间开始*/
+.left-middle-chart-wrapper{
+	position: absolute;
+	width: 650px;
+	height: 130px;
+	bottom: 220px;
+	left: 50%;
+	margin-left: -325px;
+}
+.left-middle-chart{
+	float: left;
+	width: 100px;
+	height: 352px;
+	overflow: hidden;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+	position: relative;
+    top: -106px;
+    left: 126px;
+	background-image: url(./../img/储能项目展示/电池外框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.left-middle-chart-item{
+	width: 300px;
+	height: 320px;
+	position: relative;
+	left: -55px;
+	top: 25px;
+}
+.left-middle-text{
+	width: 346px;
+	height: 100%;
+	float: left;
+	text-align: right;
+}
+.left-middle-text-num{
+	height: 80px;
+	line-height: 80px;
+	margin-right: 50px;
+	margin-bottom: 5px;
+	font-size: 80px;
+	font-weight: bold;
+	color: rgb(16,255,181);
+}
+.left-middle-text-title{
+	font-size: 40px;
+	margin-right: 10px;
+}
+.left-middle-text-title-danwei{
+	font-size: 32px;
+}
+/*第一个中间结束*/
+
+/*第一个右边开始*/
+.left-right-chart-wrapper{
+	position: absolute;
+	right: 0;
+	width: 420px;
+	height: 100%;
+	padding-top: 80px;
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+.left-right-top-wrapper{
+	height: 700px;
+	width: 100%
+}
+.left-wrapper-top-item-wrapper{
+	position:absolute;
+	left: -100px;
+	width: 264px;
+	overflow: hidden;
+	height: 700px;
+}
+.left-wrapper-top-item-wrapper:last-child{
+	left: 80px;
+}
+.left-right-top-item{
+	height: 100%;
+	width: 600px;
+	float: left;
+}
+.left-right-bottom-item{
+	height: 210px;
+	width: 100%;
+	margin-top: 30px;
+}
+/*第一个右边结束*/

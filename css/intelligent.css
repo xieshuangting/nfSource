@@ -1,0 +1,153 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1620px;
+	color: #fff;
+}
+.outer-wrapper{
+	width: 4620px;
+	height: 95%;
+}
+.left-wrapper{
+	padding-top: 40px;
+	box-shadow: border-box;
+	float: left;
+	height: 100%;
+	width: 1200px;
+	margin-right: 80px;
+}
+.middle-wrapper{
+	padding-top: 40px;
+	box-shadow: border-box;
+	float: left;
+	height: 100%;
+	width: 2020px;
+	margin-right: 80px;
+}
+.right-wrapper{
+	padding-top: 40px;
+	box-shadow: border-box;
+	float: left;
+	height: 100%;
+	width: 1200px;
+}
+.wrapper-item{
+	width: 100%;
+	height: 480px;
+	margin-bottom: 40px;
+	background-image: url(./../img/智慧台区展示/框11-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.wrapper-item:last-child{
+	margin-bottom: 0;
+}
+.wrapper-item-content{
+	height: 405px;
+	width: 100%;
+}
+
+/*label start*/
+.item-title{
+	padding-left: 30px;
+	padding-top: 25px;
+	height: 50px;
+}
+.icon-img{
+	margin-right: 20px;
+}
+.icon-img img{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: 4px;
+}
+.icon-text{
+	font-size: 32px;
+}
+/*label end*/
+
+/*first charts start*/
+.left-item-one{
+	text-align: center;
+	padding-top: 60px;
+	width: 25%;
+	float: left;
+}
+.left-item-one-img{
+	width: 100%;
+	height: 160px;
+}
+.left-item-one-img img{
+	width: 160px;
+	height: 100%;
+}
+.left-item-one-title{
+	font-size: 32px;
+	padding-top: 20px;
+}
+.left-item-one-num{
+	font-weight: bold;
+	font-size: 40px;
+	color: rgb(246,213,74);
+	padding-top: 20px;
+}
+/*first charts end*/
+
+/*second charts start*/
+.left-item-two{
+	width: 25%;
+	height: 100%;
+	float: left;
+
+}
+/*second charts end*/
+
+/*three charts start*/
+.left-item-three{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.right-padding-60{
+	box-sizing: border-box;
+	padding-right: 60px;
+}
+/*three charts end*/
+
+/*middle charts start*/
+.middle-item{
+	width: 100%;
+	height: 1520px;
+	background-image: url(./../img/智慧台区展示/背景2.jpg);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.map-charts{
+	width: 100%;
+	height: 100%;
+	/*transform: rotateX(45deg);*/
+}
+.middle-item-button{
+	position: absolute;
+	z-index: 999;
+	right: 80px;
+	top: 40px;
+	height: 100px;
+	width: 300px;
+	background-image: url(./../img/智慧台区展示/台区框-8.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.middle-item-button>img{
+	width: 85px;
+	height: 85px;
+    vertical-align: top;
+}
+.middle-item-button>span{
+	font-size: 32px;
+	line-height: 100px;
+}
+/*middle charts end*/

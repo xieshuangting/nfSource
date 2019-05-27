@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>乳源智能电网监测分析与辅助决策</title>
+	<link rel="stylesheet" type="text/css" href="./css/fengdian.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+</head>
+<body>
+	<div class="outer-wrapper" id="app">
+		<div class="left1-wrapper">
+			<div class="item-one">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">综合数据</span>
+				</div>
+				<div class="left-item-one">
+					
+					<div class="left-item-one-title">
+						<div class="left-item-one-title-img">
+							<img src="./img/风电项目展示/综合数据1.png">
+						</div>
+						<div class="left-item-one-title-text">
+							<div>{{generalData.volume.name}}</div>
+							<div class="left-item-one-title-text-danwei">{{generalData.volume.value}}{{generalData.volume.unit}}</div>
+						</div>
+					</div>
+					<div class="left-item-one-charts-wrapper">
+						<!-- 在这里插入图表 -->
+						<div class="left-item-one-charts" ref="volumeBarItem"></div>
+					</div>
+				</div>
+				<div class="left-item-one">
+					<!-- 在这里插入图表 -->
+					<div class="left-item-one-title">
+						<div class="left-item-one-title-img">
+							<img src="./img/风电项目展示/综合数据2.png">
+						</div>
+						<div class="left-item-one-title-text">
+							<div>{{generalData.electricity.name}}</div>
+							<div class="left-item-one-title-text-danwei">{{generalData.electricity.value}}{{generalData.electricity.unit}}</div>
+						</div>
+					</div>
+					<div class="left-item-one-charts-wrapper">
+						
+						<div class="left-item-one-charts" ref="electricityItem"></div>
+					</div>	
+				</div>
+				<div class="left-item-one">
+					<!-- 在这里插入图表 -->
+					 <div class="left-item-one-title">
+						<div class="left-item-one-title-img">
+							<img src="./img/风电项目展示/综合数据3.png">
+						</div>
+						<div class="left-item-one-title-text">
+							<div>{{generalData.time.name}}</div>
+							<div class="left-item-one-title-text-danwei">{{generalData.time.value}}{{generalData.time.unit}}</div>
+						</div>
+					</div>
+					<div class="left-item-one-charts-wrapper">
+						
+						<div class="left-item-one-charts" ref="timeBarChartItem"></div>
+					</div> 
+				</div>
+			</div>
+			<div class="item-two">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">社会贡献</span>
+				</div>
+				<div class="left-item-two-wrapper">
+					<div class="left-item-two">
+						<div class="left-item-two-img">
+							<img src="./img/风电项目展示/co2减排量.png">
+						</div>
+						<div class="left-item-two-text">
+							<div class="left-item-two-text-num num1" v-html="contribution.emission.value"></div>
+							<div class="left-item-two-text-danwei" v-html="contribution.emission.unit"></div>
+							<div class="left-item-two-text-title" v-html="contribution.emission.name"></div>
+						</div>
+					</div>
+					<div class="left-item-two">
+						<div class="left-item-two-img">
+							<img src="./img/风电项目展示/节约标准煤.png">
+						</div>
+						<div class="left-item-two-text">
+							<div class="left-item-two-text-num num2" v-html="contribution.coal.value"></div>
+							<div class="left-item-two-text-danwei" v-html="contribution.coal.unit"></div>
+							<div class="left-item-two-text-title" v-html="contribution.coal.name"></div>
+						</div>
+					</div>
+					<div class="left-item-two">
+						<div class="left-item-two-img">
+							<img src="./img/风电项目展示/减少种植树.png">
+						</div>
+						<div class="left-item-two-text">
+							<div class="left-item-two-text-num num3" v-html="contribution.tree.value"></div>
+							<div class="left-item-two-text-danwei" v-html="contribution.tree.unit"></div>
+							<div class="left-item-two-text-title" v-html="contribution.tree.name"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item-two">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">发电量分析-2018年</span>
+				</div>
+				<div class="left-item-three">
+					<!-- 在这里插入图表 -->
+					<div class="left-item-three-charts" ref="barItem"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="left2-wrapper">
+			<div class="left2-item">
+				<!-- <div class="left2-item-title">
+					<div class="left3-item-title-img"><img src="./img/风电项目展示/定位图标.png"></div>
+					<div class="left3-item-title-text">乳源瑶族自治县</div>
+					<div class="left3-item-title-icon"><img src="./img/风电项目展示/定位图标.png"></div>
+					<div class="left3-item-title-text2">多云</div>
+				</div> -->
+				<!-- <div class="left2-item-icon-wrapper">
+					<div class="left-item-icon-one">
+						<div class="left-item-icon-one-img">
+							<img src="././img/光伏项目/平均风速.png">
+						</div>
+						<div class="left-item-icon-one-text">
+							<span class="left-item-icon-one-num num1">5.92m/s</span>
+							<span class="left-item-icon-one-title">年平均风速</span>
+						</div>
+					</div>
+					<div class="left-item-icon-one">
+						<div class="left-item-icon-one-img">
+							<img src="././img/光伏项目/平均气温.png">
+						</div>
+						<div class="left-item-icon-one-text">
+							<span class="left-item-icon-one-num num2">28℃</span>
+							<span class="left-item-icon-one-title">年平均气温</span>
+						</div>
+					</div>
+					<div class="left-item-icon-one">
+						<div class="left-item-icon-one-img">
+							<img src="././img/光伏项目/平均气压.png">
+						</div>
+						<div class="left-item-icon-one-text">
+							<span class="left-item-icon-one-num num3">101hpa</span>
+							<span class="left-item-icon-one-title">年平均气压</span>
+						</div>
+					</div>
+					<div class="left-item-icon-one">
+						<div class="left-item-icon-one-img">
+							<img src="././img/光伏项目/平均降雨量.png">
+						</div>
+						<div class="left-item-icon-one-text">
+							<span class="left-item-icon-one-num num4">49mm</span>
+							<span class="left-item-icon-one-title">年平均降雨量</span>
+						</div>
+					</div>
+					<div class="left-item-icon-one">
+						<div class="left-item-icon-one-img">
+							<img src="././img/光伏项目/日照小时数.png">
+						</div>
+						<div class="left-item-icon-one-text">
+							<span class="left-item-icon-one-num num5">1427小时</span>
+							<span class="left-item-icon-one-title">日照小时数</span>
+						</div>
+					</div>
+				</div> -->
+				<div class="left2-item-top">
+					<div class="left2-item-title">
+						<img src="./img/风电项目展示/预测分析-8.png">
+						<span>预测分析</span>
+					</div>
+					<div class="left2-item-top-wrapper">
+						<div class="left2-item-top-icon">
+							<div class="left2-item-top-icon-img"><img src="./img/光伏项目/平均风速.png"></div>
+							<div class="left2-item-top-icon-text">
+								<span class="div">风速：<span id="fs"></span></span>
+								<span class="div">风向：<span id="fx"></span></span>
+							</div>
+						</div>
+						<div class="left2-item-top-icon">
+							<div class="left2-item-top-icon-img"><img src="./img/光伏项目/平均气温.png"></div>
+							<div class="left2-item-top-icon-text">
+								<span class="div">温度：<span id="wdz"></span></span>
+								<span class="div">湿度：<span id="sdz"></span></span>
+							</div>
+						</div>
+						<div class="left2-item-top-icon">
+							<div class="left2-item-top-icon-img"><img src="./img/光伏项目/平均降雨量.png"></div>
+							<div class="left2-item-top-icon-text">
+								<span class="div">降雨量：<span id="jylz"></span></span>
+								<span class="div">大气压强：<span id="zwx"></span></span>
+							</div>
+						</div>
+					</div>
+					<div class="left2-item-bottom-weraper">
+						<div class="left2-item-bottom">
+							<div class="left2-item-bottom-title">昨日发电量<span>（万kWh）</span></div>
+							<div class="green left2-item-bottom-num">
+								<span class="iconfont" v-for="item in numList1" v-html="item" :class="item.indexOf('xe608') != -1?{point:true}:{point:false}"></span>
+							</div>
+						</div>
+						<div class="left2-item-bottom">
+							<div class="left2-item-bottom-title">预测今日发电量<span>（万kWh）</span></div>
+							<div class="blue left2-item-bottom-num">
+								<span class="iconfont" v-for="item in numList2" v-html="item" :class="item.indexOf('xe608') != -1?{point:true}:{point:false}"></span>
+								<!-- <span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span> -->
+							</div>
+						</div>
+						<div class="left2-item-bottom">
+							<div class="left2-item-bottom-title">预测明日发电量<span>（万kWh）</span></div>
+							<div class="origin left2-item-bottom-num">
+								<span class="iconfont" v-for="item in numList3" v-html="item" :class="item.indexOf('xe608') != -1?{point:true}:{point:false}"></span>
+								<!-- <span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span>
+								<span class="iconfont">&#xe70f;</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="middle-wrapper">
+			<div class="middle-item-wrapper">
+				<div class="middle-item">
+					<div class="middle-item-title">
+						<div class="middle-item-title-name">地理分布</div>
+					</div>
+					<div class="middle-item-content">
+						<!-- 在这里插入图表 -->
+						<div class="middle-item-content-charts" ref="mapItem"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-wrapper">
+			<div class="item-one">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">运行数据</span>
+				</div>
+				<div class="right-item-one">
+					<div class="right-item-one-wrapper">
+						<!-- 在这里插入图表 -->
+						<div class="right-item-one-charts" ref="sportChart1"></div>
+					</div>
+					<div class="right-item-one-wrapper">
+						<!-- 在这里插入图表 -->
+						<div class="right-item-one-charts" ref="sportChart2"></div>
+					</div>
+				</div>
+			</div>
+			<div class="item-two">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">中长期预测分析-2018年</span>
+				</div>
+				<div class="right-item-two-wrapper">
+					<!-- 在这里插入图表 -->
+					<div class="right-item-two-charts" ref="rankingBarItem"></div>
+				</div>
+			</div>
+			<div class="item-two">
+				<div class="item-title">
+					<span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+					<span class="icon-text">安全指数</span>
+				</div>
+				<div class="right-item-three-wrapper">
+					<div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts1"></div>
+						</div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts2"></div>
+						</div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts3"></div>
+						</div>
+					</div>
+					<div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts4"></div>
+						</div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts5"></div>
+						</div>
+						<div class="right-item-three-charts-wrapper">
+							<!-- 在这里插入图表 -->
+							<div class="right-item-three-charts" ref="safeCharts6"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+	<script type="text/javascript" src="./js/fengdian.js"></script>
+	<script type="text/javascript" src="./js/地图及天气.js"></script>
+</body>
+</html>

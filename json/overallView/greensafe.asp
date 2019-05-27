@@ -1,0 +1,17 @@
+{
+	guangfu:{
+		value1:40,
+		value2:40,
+		value3:40
+	},
+	fengdian:{
+		value1:40,
+		value2:40,
+		value3:40
+	},
+	shuidian:{
+		value1:40,
+		value2:40,
+		value3:40
+	}
+}

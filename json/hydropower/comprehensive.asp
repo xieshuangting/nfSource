@@ -1,0 +1,18 @@
+{
+	capacity1:{
+		title:"年发电量",
+		value:233832
+	},
+	capacity2:{
+		title:"总装机空量",
+		value:405.655 
+	},
+	rate1:{
+		name:"利用率",
+		value:61.9
+	},
+	rate2:{
+		name:"负荷率",
+		value:83.7
+	}
+}

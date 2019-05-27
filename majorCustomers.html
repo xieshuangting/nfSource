@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>乳源智能电网监测分析与辅助决策</title>
+    <link rel="stylesheet" type="text/css" href="./css/majorCustomers.css">
+</head>
+
+<body>
+    <div class="outer-wrapper" id="app">
+        <div class="left-wrapper">
+        	<div class="item-first-wrapper">
+        		<div class="item-first-title">重点用户监控</div>
+        		<!-- 在这里插入图表 -->
+        		<div class="item-first-charts" ref="mapItem"></div>
+        	</div>
+            <div class="item-wrapper">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">重点用户用电情况-2018年</span>
+                </div>
+                <div class="one-charts-wrapper padding-20">
+                    <!-- 在这里插入图表 -->
+                    <div class="one-charts-item" ref="usePowerChart1"></div>
+                    <div class="one-charts-item" ref="usePowerChart2"></div>
+                    <div class="one-charts-item" ref="usePowerChart3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-wrapper">
+            <div class="middle-item-wrapper1">
+            	<div class="middle-item-wrapper1-one">
+            		<div class="item-title">
+	                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+	                    <span class="icon-text">重点用户能耗数据占比分析-2018年</span>
+	                </div>
+	                <!-- 在这里插入图表 -->
+	                <div class="middle-item-first-chart" ref="energyConsumptionItem"></div>
+            	</div>
+            	<div class="middle-item-wrapper1-one">
+            		<div class="item-title">
+	                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+	                    <span class="icon-text">重点用户异常警告分析-2018年</span>
+	                </div>
+	                <!-- 在这里插入图表 -->
+	                <div class="middle-item-first-chart" ref="errorItem"></div>
+            	</div>
+            </div>
+            <div class="middle-item-wrapper2">
+            	<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">重点用户能耗峰平谷分析-2018年</span>
+                </div>
+                <div class="middle-item-div">
+                	<div class="middle-item-div-one">峰总用电量：<span v-html="consumptionData.peak+'万kWh'"></span></div>
+                	<div class="middle-item-div-one">平总用电量：<span v-html="consumptionData.flat+'万kWh'"></span></div>
+                	<div class="middle-item-div-one">谷总用电量：<span v-html="consumptionData.valley+'万kWh'"></span></div>
+                </div>
+                <!-- 在这里插入图表 -->
+                <div class="middle-item-two-chart" ref='consumptionChartItem'></div>
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="item-wrapper">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">重点用户重点设备监控-2018年</span>
+                </div>
+                <!-- 在这里插入图表 -->
+                <div class="one-charts-wrapper" ref="deviceChart"></div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">重点用户能耗数据占比分析-2018年</span>
+                </div>
+                <div class="one-charts-wrapper">
+                	<!-- 在这里插入图表 -->
+                	<div class="right-charts-item" ref="liquidFillItem_1"></div>
+                    <div class="right-charts-item" ref="liquidFillItem_2"></div>
+                    <div class="right-charts-item" ref="liquidFillItem_3"></div>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">光伏项目情况</span>
+                </div>
+                <!-- 在这里插入图表 -->
+                <div class="one-charts-wrapper" ref="loadItem"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/echarts/echarts-liquidfill.min.js"></script>
+    <script type="text/javascript" src="./js/majorCustomers.js"></script>
+</body>
+
+</html>

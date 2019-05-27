@@ -1,0 +1,18 @@
+{
+	overallEfficiency:{
+		title:"综合效率",
+		value:0.986
+	},
+	passEfficiency:{
+		title:"电压合格率",
+		value:0.98
+	},
+	reduceLost:{
+		title:"降低台区损耗",
+		value:0.45
+	},
+	loadEfficiency:{
+		title:"负载率",
+		value:0.60
+	}
+}

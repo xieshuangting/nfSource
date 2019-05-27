@@ -1,0 +1,32 @@
+[
+	{
+		name:'1#储能10MW',
+		value:87.5,
+		color:'#FF4343',
+	},
+	{
+		name:'2#储能10MW',
+		value:85.7,
+		color:'#F69846',
+	},
+	{
+		name:'1#储能5MW',
+		value:46.2,
+		color:'#F6D54A',
+	},
+	{
+		name:'2#储能5MW',
+		value:50.6,
+		color:'#45DBF7',
+	},
+	{
+		name:'1#储能20MW',
+		value:95.1,
+		color:'#44AFF0',
+	},
+	{
+		name:'3#储能10MW',
+		value:72.9,
+		color:'#4777F5',
+	}
+]

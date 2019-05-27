@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  color: #fff;
+  width: 4620px;
+  height: 1790px;
+}
+a:visited {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+/*@media only screen and (max-width: 1920px){
+    .index{
+        margin-top: 4.5px;
+    }
+
+    .items-wrapper{
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .item-wrapper{
+        cursor: pointer;
+
+        float: left;
+        width: 14%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding-right: 2px;
+        box-sizing: border-box;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .item {
+        border-radius: 4px;
+        background-color: #182C5A;
+        background-image: url(./../img/菜单未选中状态.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+        width: 100%;
+        overflow:hidden;
+    }
+
+    .item span {
+        padding-left: 2px;
+    }
+
+    .visited {
+        background-image: url(./../img/菜单选中状态.png);
+    }
+
+    .item img {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 2px;
+    }
+    .child-nav{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 30px;
+        left: 0;
+        padding-right: 2px;
+        box-sizing: border-box;
+    }
+    .child-nav li:first-child{
+        background-image: none;
+    }
+    .child-nav li:hover:first-child{
+        background-image: url(./../img/二级页面图片/三级菜单选中.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .child-nav li:hover{
+        background-image: url(./../img/二级页面图片/三级菜单选中.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .child-nav li{
+        background: rgba(56,115,154,.8); 
+        background-image: url(./../img/二级页面图片/三级菜单.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .bread-wrapper{
+        margin-top: 15px;
+        width: 20%;
+        height: 28px;
+        background-image: url(./../img/面包屑3.png);
+        background-size: 100% 100%;
+
+    }
+    .bread-item{
+        display: inline-block;
+        font-size: 0;
+        line-height: 18px;
+        margin-left: 8px;
+    }
+    .bread img{
+        position:relative;
+        top: 3px;
+        width: 15px;
+    }
+    .bread span{
+        font-size: 12px;
+    }
+    .name{
+        margin-left: 8px;
+    }
+    .first-name{
+        margin-left: 4px;
+    }
+
+}*/
+
+/*@media only screen and (min-width: 1921px){*/
+    .index{
+        padding-top: 12px;
+        box-sizing: border-box;
+    }
+    /*导航栏样式开始*/
+    .items-wrapper{
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .item-wrapper{
+        cursor: pointer;
+        /*display: inline-block;*/
+        float: left;
+        width: 650px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        padding-right: 6px;
+        box-sizing: border-box;
+        font-size: 30px;
+        position: relative;
+    }
+
+    .item {
+        border-radius: 4px;
+        background-color: #182C5A;
+        background-image: url(./../img/菜单未选中状态.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+        width: 100%;
+        overflow:hidden;
+    }
+/*    .item-wrapper:hover .item{
+        background: url(./../img/二级页面图片/鼠标经过菜单.png)
+    }*/
+
+
+    .item span {
+        padding-left: 20px;
+    }
+    .over{
+        background-image: url(./../img/二级页面图片/鼠标经过菜单.png);
+    }
+    .left{
+        background-image: url(./../img/菜单未选中状态.png);
+    }
+    .visited {
+        background-image: url(./../img/菜单选中状态.png);
+    }
+
+    .item img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+    }
+/*    .item-wrapper:hover .child-nav{
+        display: block;
+    }*/
+    .child-nav{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        padding-right: 6px;
+        box-sizing: border-box;
+    }
+    .child-nav li:first-child{
+        background-image: none;
+    }
+    .child-nav li:hover:first-child{
+        background-image: url(./../img/二级页面图片/三级菜单选中.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .child-nav li:hover{
+        background-image: url(./../img/二级页面图片/三级菜单选中.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .child-nav li{
+        background: rgba(56,115,154,.8); 
+        background-image: url(./../img/二级页面图片/三级菜单.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        list-style: none;
+    }
+    /*导航栏样式开始*/
+
+    /*面包屑样式开始*/
+    .bread-wrapper{
+        margin-top: 40px;
+        width: 974px;
+        height: 48px;
+        background-image: url(./../img/面包屑3.png);
+        background-size: 100% 100%;
+
+    }
+    .bread-item{
+    	display: inline-block;
+    	font-size: 0;
+    	line-height: 48px;
+    	margin-left: 20px;
+    }
+    .bread img{
+    	position:relative;
+    	top: 2px;
+    }
+    .bread span{
+    	font-size: 20px;
+    }
+    .name{
+    	margin-left: 20px;
+    }
+    .first-name{
+    	margin-left: 10px;
+    }
+    /*面包屑样式结束*/
+/*}*/

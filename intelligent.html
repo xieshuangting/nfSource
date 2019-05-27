@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>乳源智能电网监测分析与辅助决策</title>
+    <link rel="stylesheet" type="text/css" href="./css/intelligent.css">
+</head>
+<body>
+	<div class="outer-wrapper" id="app">
+		<div class="left-wrapper">
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">智慧台区信息汇总</span>
+                </div>
+                <div class="wrapper-item-content">
+                	<div class="left-item-one">
+                		<div class="left-item-one-img"><img src="./img/智慧台区展示/汇总1-8.png"></div>
+                		<div class="left-item-one-title" v-html="infoData.totalAmount.title"></div>
+                		<div class="left-item-one-num" v-html="infoData.totalAmount.value"></div>
+                	</div>
+                	<div class="left-item-one">
+                		<div class="left-item-one-img"><img src="./img/智慧台区展示/汇总2-8.png"></div>
+                		<div class="left-item-one-title" v-html="infoData.totalCus.title"></div>
+                		<div class="left-item-one-num" v-html="infoData.totalCus.value"></div>
+                	</div>
+                	<div class="left-item-one">
+                		<div class="left-item-one-img"><img src="./img/智慧台区展示/汇总3-8.png"></div>
+                		<div class="left-item-one-title" v-html="infoData.ammeter.title"></div>
+                		<div class="left-item-one-num" v-html="infoData.ammeter.value"></div>
+                	</div>
+                	<div class="left-item-one">
+                		<div class="left-item-one-img"><img src="./img/智慧台区展示/汇总4-8.png"></div>
+                		<div class="left-item-one-title" v-html="infoData.terminal.title"></div>
+                		<div class="left-item-one-num" v-html="infoData.terminal.value"></div>
+                	</div>
+                </div>
+			</div>
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">运行数据综合分析</span>
+                </div>
+                <div class="wrapper-item-content">
+                	<div class="left-item-two" ref="sportItem1"></div>
+                	<div class="left-item-two" ref="sportItem2"></div>
+                	<div class="left-item-two" ref="sportItem3"></div>
+                	<div class="left-item-two" ref="sportItem4"></div>
+                </div>
+			</div>
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">台区设备运行状态</span>
+                </div>
+                <div class="wrapper-item-content right-padding-60">
+                	<div class="left-item-three" ref="deviceItem1"></div>
+                	<div class="left-item-three" ref="deviceItem2"></div>
+                </div>
+			</div>
+		</div>
+		<div class="middle-wrapper">
+			<div class="middle-item">
+				<!-- <div class="middle-item-button">
+					<img src="./img/智慧台区展示/智慧台区-8.png">
+					<span>智慧台区</span>
+				</div> -->
+                <div class="map-charts" ref="mapItem"></div>
+			</div>
+		</div>
+		<div class="right-wrapper">
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">台区用电量趋势分析</span>
+                </div>
+                <div class="wrapper-item-content" ref="useEleItem"></div>
+			</div>
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">电能质量分析</span>
+                </div>
+                <div class="wrapper-item-content" ref="powerQualityItem"></div>
+			</div>
+			<div class="wrapper-item">
+				<div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">告警事件统计</span>
+                </div>
+                <div class="wrapper-item-content" ref='warnItem'></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/intelligent.js"></script>
+</body>
+</html>

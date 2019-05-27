@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>乳源智能电网监测分析与辅助决策</title>
+    <link rel="stylesheet" type="text/css" href="./css/visualization.css">
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/地图及天气.js"></script>
+</head>
+
+<body>
+    <div class="outer-wrapper" id="app">
+        <div class="left-wrapper">
+            <div class="left-item">
+                <div class="weather-wrapper">
+                    <img src="./img/数据可视化/气象数据-8.png">
+                    <span class="weather-title">气象数据:</span>
+                    <span>天气：<span id="tqqk">多云</span><img src="" id="map-weather" width="40"></span>
+                    <span>温度：<span id="wdz">19</span></span>
+                    <span>温度：<span id="sdz">19</span></span>
+                    <span>降雨量：<span id="jylz">5.0mm</span></span>
+                </div>
+                <div class="com-wrapper">
+                    <div v-html="totalData.com.title"></div>
+                    <div v-html="'电压等级：'+parseInt(totalData.com.calss*random)+'kV'"></div>
+                    <div v-html="'装机容量：'+parseInt(totalData.com.capital*random)+'MW'"></div>
+                    <div v-html="'时间：'+time"></div>
+                    <div>运行状态：{{totalData.com.status}}<img src="./img/数据可视化/正常-8.png"></div>
+                </div>
+                <div class="left-item-one">
+                    <div class="left-item-num" v-html="(totalData.topWater.value*random).toFixed(2)"></div>
+                    <div class="left-item-text" v-html="totalData.topWater.title+'('+totalData.topWater.unit+')'"></div>
+                </div>
+                <div class="left-item-two">
+                    <div class="left-item-num" v-html="(totalData.bottomWater.value*random).toFixed(2)"></div>
+                    <div class="left-item-text" v-html="totalData.bottomWater.title+'('+totalData.bottomWater.unit+')'"></div>
+                </div>
+                <div class="left-item-three">
+                    <div class="left-item-num" v-html="(totalData.storage.value*random).toFixed(2)"></div>
+                    <div class="left-item-text" v-html="totalData.storage.title+'('+totalData.storage.unit+')'"></div>
+                </div>
+                <div class="left-item-four">
+                    <div  v-html="totalData.float.title+'('+totalData.float.unit+'):'+parseInt(totalData.float.value*random)"></div>
+                </div>
+                <div class="left-item-five">
+                    <ul>
+                        <li><span v-html="totalData.todayPower.title"></span><span v-html="parseInt(totalData.todayPower.value*random)+totalData.todayPower.unit"></span></li>
+                        <li><span v-html="totalData.u.title"></span><span v-html="parseInt(totalData.u.value*random)+totalData.u.unit"></span></li>
+                        <li><span v-html="totalData.i.title"></span><span v-html="parseInt(totalData.i.value*random)+totalData.i.unit"></span></li>
+                        <li><span v-html="totalData.p.title"></span><span v-html="parseInt(totalData.p.value*random)+totalData.p.unit"></span></li>
+                        <li><span v-html="totalData.q.title"></span><span v-html="parseInt(totalData.q.value*random)+totalData.q.unit"></span></li>
+                        <li><span v-html="totalData.s.title"></span><span v-html="parseInt(totalData.s.value*random)+totalData.s.unit"></span></li>
+                    </ul>
+                </div>
+                <div class="left-item-six">
+                    <ul>
+                        <li><span v-html="totalData.speed.title"></span><span v-html="parseInt(totalData.speed.value*random)+totalData.speed.unit"></span></li>
+                        <li><span v-html="totalData.power.title"></span><span v-html="parseInt(totalData.power.value*random)+totalData.power.unit"></span></li>
+                    </ul>
+                </div>
+                <div class="float-arrow"></div>
+                <div class="top-water"></div>
+                <div class="power"></div>
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="right-item-top">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">水电站综合分析</span>
+                </div>
+                <div class="right-item-top-wrapper">
+                    <div class="right-item-top-item">
+                        <img src="./img/数据可视化/综合1-8.png">
+                        <div class="right-item-top-item-text" v-html="totalData.water.yearPower.title+'('+totalData.water.yearPower.unit+')'"></div>
+                        <div class="right-item-top-item-num" v-html="totalData.water.yearPower.value"></div>
+                    </div>
+                    <div class="right-item-top-item">
+                        <img src="./img/数据可视化/综合2-8.png">
+                        <div class="right-item-top-item-text" v-html="totalData.water.time.title+'('+totalData.water.time.unit+')'"></div>
+                        <div class="right-item-top-item-num" v-html="totalData.water.time.value"></div>
+                    </div>
+                    <div class="right-item-top-item">
+                        <img src="./img/数据可视化/综合3-8.png">
+                        <div class="right-item-top-item-text" v-html="totalData.water.load.title+'('+totalData.water.load.unit+')'"></div>
+                        <div class="right-item-top-item-num" v-html="totalData.water.load.value"></div>
+                    </div>
+                    <div class="right-item-top-item">
+                        <img src="./img/数据可视化/综合4-8.png">
+                        <div class="right-item-top-item-text" v-html="totalData.water.eff.title+'('+totalData.water.eff.unit+')'"></div>
+                        <div class="right-item-top-item-num" v-html="totalData.water.eff.value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-item-top">
+                <div class="item-title">
+                    <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                    <span class="icon-text">发电量与发电效益分析-2018</span>
+                </div>
+                <div class="right-item-chart" ref="barItem"></div>
+            </div>
+            <div class="right-item-bottom">
+                <div class="right-item-bottom-item bottom-item-one">
+                    <div class="item-title">
+                        <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                        <span class="icon-text">未来七天气象分析</span>
+                    </div>
+                    <div class="item-title-switch">
+                        <img src="./img/数据可视化/温湿度-8.png" v-if="radioButton == true" @click="radioButton = true">
+                        <img src="./img/数据可视化/温湿度2-8.png" v-else @click="radioButton = true">
+                        <span>温湿度</span>
+                        <img src="./img/数据可视化/温湿度2-8.png" v-if="radioButton != false" @click="radioButton = false">
+                        <img src="./img/数据可视化/温湿度-8.png" v-else @click="radioButton = false">
+                        <span>降水量</span>
+                    </div>
+                    <div class="right-item-chart wsd" ref="weatherItem" v-show="radioButton == true"></div>
+                    <div class="right-item-chart jyl" ref="jslItem" v-show="radioButton == false"></div>
+                </div>
+                <div class="right-item-bottom-item">
+                    <div class="item-title">
+                        <span class="icon-img"><img src="./img/风电项目展示/标题图标.png"></span>
+                        <span class="icon-text">未来七天发电量预测分析</span>
+                    </div>
+                    <div class="right-item-chart fdl" ref="eleEnergyItem"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/visualization.js"></script>
+</body>
+
+</html>
